@@ -6,3 +6,6 @@ conda activate main-ds
 pip install numpy pandas matplotlib seaborn babel streamlit
 ```
 ## Run Streamlit App
+```
+streamlit run dashboard_pad.py
+```
