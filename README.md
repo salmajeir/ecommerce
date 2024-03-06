@@ -9,6 +9,8 @@ pip install numpy pandas matplotlib seaborn streamlit babel
 ## Make Directory
 ```
 mkdir proyek_analisis_data
+move C:\Users\Lenovo\Downloads\all_data.csv
+proyek_analisis_data
 cd C:\Users\Lenovo\proyek_analisis_data
 ```
 
