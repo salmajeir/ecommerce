@@ -48,8 +48,7 @@ st.header('Brazilian E-Commerce Public Dataset by Olist')
 count_payments_df = create_payments_df(main_df)
 st.subheader('Number of Customer by Payment Types')
 fig, ax = plt.subplots(figsize=(12, 6))
-colors_ = ["#8B0000", "#FF0000", "#FFC0CB", "#D3D3D3", "#D3D3D3"]
-sns.barplot(x="payments_count",y="payment_type",data=count_payments_df.sort_values(by="payments_count",ascending=False), hue=1, legend=False)
+sns.barplot(x="payments_count",y="payment_type",data=count_payments_df.sort_values(by="payments_count",ascending=False),palette="viridis")
 plt.title("Number of Customer by Payment Types", loc="center", fontsize=15)
 plt.xlabel("Count Customer", fontsize=14)
 plt.ylabel("Payment Types", fontsize=14)
@@ -58,8 +57,7 @@ st.pyplot(fig)
 count_sellers_df = create_sellers_df(main_df)
 st.subheader('Number of Customer by Each City')
 fig, ax = plt.subplots(figsize=(12, 6))
-colors_ = ["#8B0000", "#FF0000", "#FF6347", "#FF7F50", "#FFA07A", "#FFC0CB", "#D3D3D3", "#D3D3D3", "#D3D3D3", "#D3D3D3"]
-sns.barplot(x="sellers_count",y="seller_city",data=count_sellers_df.sort_values(by="sellers_count",ascending=False).head(10), hue=1, legend=False)
+sns.barplot(x="sellers_count",y="seller_city",data=count_sellers_df.sort_values(by="sellers_count",ascending=False).head(10),palette="viridis")
 plt.title("Number of Customer for Each City", loc="center", fontsize=15)
 plt.xlabel("Count Seller", fontsize=14)
 plt.ylabel("Seller City", fontsize=14)
@@ -68,17 +66,8 @@ st.pyplot(fig)
 count_reviews_df = create_reviews_df(main_df)
 st.subheader('Number of Reviews by Score')
 fig, ax = plt.subplots(figsize=(12, 6))
-colors_ = ["#8B0000"]
-sns.barplot(x="review_score",y="reviews_count",data=count_reviews_df.sort_values(by="reviews_count",ascending=False).head(10), hue=1, legend=False)
+sns.barplot(x="review_score",y="reviews_count",data=count_reviews_df.sort_values(by="reviews_count",ascending=False).head(10),palette="viridis")
 plt.title("Number of Reviews by Score", loc="center", fontsize=15)
 plt.xlabel("Score", fontsize=14)
 plt.ylabel("Number of Reviews", fontsize=14)
 st.pyplot(fig)
-
-
-
-
-
-
-
-
